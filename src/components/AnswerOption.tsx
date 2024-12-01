@@ -2,17 +2,18 @@ import { Pressable, StyleSheet, Text } from "react-native";
 
 type AnswerOption = {
   option: string;
+  isSelected?: boolean;
 };
 
-export default function AnswerOption({ option }: AnswerOption) {
+export default function AnswerOption({ option, isSelected }: AnswerOption) {
   return (
     <Pressable
       style={[
         styles.container,
-        // isSelected && {
-        //   backgroundColor: "#E1F396",
-        //   borderColor: "#E1F396",
-        // },
+        isSelected && {
+          backgroundColor: "#E1F396",
+          borderColor: "#E1F396",
+        },
       ]}
     >
       <Text>{option}</Text>

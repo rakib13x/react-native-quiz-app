@@ -10,18 +10,11 @@ import {
 import Card from "../components/Card";
 import CustomButton from "../components/CustomButton";
 import QuestionCard from "../components/QuestionCard";
+import questions from "../question";
+
+const question = questions[0];
 
 export default function QuizScreen() {
-  const question = {
-    title: "What does HTML stand for?",
-    options: [
-      "Hyper Text Markup Language",
-      "Highly Technical Markup Language",
-      "Hyperlinks and Text Markup Language",
-      "Hyper Tool Markup Language",
-    ],
-    correctAnswer: "Hyper Text Markup Language",
-  };
   function onNext(event: GestureResponderEvent): void {
     throw new Error("Function not implemented.");
   }
@@ -31,7 +24,7 @@ export default function QuizScreen() {
       <View style={styles.container}>
         {/* Header */}
         <View>
-          <Text style={styles.title}>Question</Text>
+          <Text style={styles.title}>Question 1/5</Text>
         </View>
 
         {/* Body */}
